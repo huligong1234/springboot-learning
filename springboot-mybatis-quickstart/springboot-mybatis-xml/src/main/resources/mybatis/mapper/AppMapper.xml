@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.jeedevframework.springboot.mapper.AppMapper">
+
+	 <resultMap id="BaseResultMap" type="org.jeedevframework.springboot.entity.App" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+        <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP"/>
+        <result column="is_deleted" property="isDeleted" jdbcType="INTEGER"/>
+        <result column="re_order" property="reOrder" jdbcType="INTEGER"/>
+        <result column="app_code" property="appCode" jdbcType="VARCHAR"/>
+        <result column="app_name" property="appName" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+	<select id="findAll" resultMap="BaseResultMap">
+		SELECT * FROM app
+	</select>
+
+	<select id="findOne" parameterType="Integer" resultMap="BaseResultMap">
+		SELECT *
+		FROM app WHERE id=#{id}
+	</select>
+
+
+	<insert id="addOne" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO app(gmt_create,app_code,app_name) VALUES
+		(NOW(),#{appCode},#{appName})
+	</insert>
+
+	<update id="updateOne">
+		UPDATE app SET app_name=#{appName},gmt_modified=NOW()
+		WHERE id=#{id}
+	</update>
+
+	<delete id="deleteOne">
+		DELETE FROM app WHERE id = #{id}
+	</delete>
+</mapper>
