@@ -24,7 +24,9 @@ cnpm install axios --save
 npm run dev
 ```
 
-
+### 3.启动
+* 启动后端接口服务 springboot-rest-backend 端口号8080
+* 启动前端服务 访问地址 http://localhost:8081/
 
 ## 二、webpack介绍
 
