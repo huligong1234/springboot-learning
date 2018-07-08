@@ -10,6 +10,10 @@ SpringBoot + JPA + MySQL
 
 ### 2.前端项目 vue-element-admin
 
+本示例项目是基于 vueAdmin-template
+
+vueAdmin-template使用说明 ：https://github.com/PanJiaChen/vueAdmin-template/blob/master/README-zh.md
+
 ```shell
 
 # Install dependencies
