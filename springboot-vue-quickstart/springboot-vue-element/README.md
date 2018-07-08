@@ -5,6 +5,7 @@
 ### 1.后端服务项目 springboot-restful-backend-element
 
 
+SpringBoot + JPA + MySQL
 
 
 ### 2.前端项目 vue-element-admin
