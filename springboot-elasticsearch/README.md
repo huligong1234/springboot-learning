@@ -21,9 +21,9 @@ elasticsearch环境准备：
 
 ## 二、依赖版本信息
 
-spring-boot-starter-parent:2.0.3.RELEASE
-spring-data-elasticSearch:3.0.8.RELEASE
-elasticsearch-rest-client:5.6.10
+* spring-boot-starter-parent:2.0.3.RELEASE
+* spring-data-elasticSearch:3.0.8.RELEASE
+* elasticsearch-rest-client:5.6.10
 
 
 
